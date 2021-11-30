@@ -52,7 +52,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "node-sass": "^4.13.1"
   }
