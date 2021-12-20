@@ -16,6 +16,7 @@ const CONSTANTS = {
   STATIC_IMAGES_PATH: '/staticImages/',
   ANONYM_IMAGE_PATH: '/staticImages/anonym.png',
   BASE_URL: `http://${serverIP}:${serverPort}/`,
+  MOCK_HREF: 'http://www.google.com',
   ACCESS_TOKEN: 'accessToken',
   publicURL:
     env === 'production'
@@ -40,6 +41,57 @@ const CONSTANTS = {
     'an App',
     'a Product',
     'a Startup',
+  ],
+  NAVIGATION_ITEMS: [
+    {
+      title: 'NAME IDEAS',
+      items: [
+        'BEAUTY',
+        'CONSULTING',
+        'E-COMMERCE',
+        'FASHION & CLOTHING',
+        'FINANCE',
+        'ESTATE',
+        'TECH',
+        'MORE CATEGORIES',
+      ],
+    },
+    {
+      title: 'CONSTESTS',
+      items: [
+        'HOW IT WORKS',
+        'PRICING',
+        'AGENCY SERVICE',
+        'ACTIVE CONTESTS',
+        'WINNERS',
+        'LEADERBOARD',
+        'BECOME A CREATIVE',
+      ],
+    },
+    {
+      title: 'OUR WORK',
+      items: ['NAMES', 'TAGLINES', 'LOGOS', 'TESTIMONIALS'],
+    },
+    {
+      title: 'NAMES FOR SALE',
+      items: [
+        'POPULAR NAMES',
+        'SHORT NAMES',
+        'INTRIGUING NAMES',
+        'NAMES BY CATEGORY',
+        'VISUAL NAME SEARCH',
+        'SELL YOUR DOMAINS',
+      ],
+    },
+    {
+      title: 'BLOG',
+      items: [
+        'ULTIMATE NAMING GUIDE',
+        'POETIC DEVICES IN BUISINESS NAMING',
+        'CROWDED BAR THEORY',
+        'ALL ARTICLES',
+      ],
+    },
   ],
   FooterItems: [
     {
