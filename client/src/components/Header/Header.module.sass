@@ -1,3 +1,4 @@
+@import ../../common/styles/templates
 
 .headerContainer
   display: flex
@@ -92,19 +93,17 @@
               width: 160px
               display: none
 
-              .last
-                width: 100%
-                padding-top: 8px
-                box-sizing: border-box
-                border-top: 1px solid aquamarine
-
               li
                 box-sizing: border-box
                 width: 100%
                 padding: 10px 15px
                 display: flex
                 justify-content: flex-start
-
+                &:last-child 
+                  width: 100%
+                  padding-top: 8px
+                  box-sizing: border-box
+                  border-top: 1px solid aquamarine
                 &:hover
                   background: #f9fafb
 
@@ -133,9 +132,7 @@
 
     .userButtonsContainer
       margin-left: 100px
-      align-items: center
-      justify-content: center
-      display: flex
+      @extend %flex-center
       border-left: 1px solid #ebebeb
       height: 40px
       @media(max-width: 600px)
@@ -150,17 +147,14 @@
         border-right: 1px solid #ebebeb
 
       .userInfo
-        display: flex
-        justify-content: center
-        align-items: center
+        @extend %flex-center
         padding: 0 15px
         border-right: 1px solid #ebebeb
-
         &:hover
           ul
             display: block
             position: absolute
-            top: 45px
+            top: 60px
 
         ul
           border: 1px solid #eee
@@ -206,9 +200,7 @@
     .numberContainer
       text-decoration: none
       color: inherit
-      display: flex
-      justify-content: center
-      align-items: center
+      @extend %flex-center
       padding: 0 15px
       border-right: 1px solid #ebebeb
       border-left: 1px solid #ebebeb
@@ -229,9 +221,7 @@
 
   .fixedHeader
     z-index: 500
-    display: flex
-    justify-content: center
-    align-items: center
+    @extend %flex-center
     width: 100%
     position: fixed
     background-color: rgb(69, 90, 137)
