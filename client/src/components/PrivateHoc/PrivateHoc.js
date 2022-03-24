@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import { getUserAction } from '../../actions/actionCreator';
 import Spinner from '../Spinner/Spinner';
 
@@ -19,16 +18,17 @@ const PrivateHoc = (Component, props) => {
     }
 
     render () {
+      const { error, isFetching, history, match } = this.props;
+      //Error 408 means authorization failed, therefore not to show child component
+      if (error && error.status === 408) {
+        return '';
+      }
       return (
         <>
-          {this.props.isFetching ? (
+          {isFetching ? (
             <Spinner />
           ) : (
-            <Component
-              history={this.props.history}
-              match={this.props.match}
-              {...props}
-            />
+            <Component history={history} match={match} {...props} />
           )}
         </>
       );

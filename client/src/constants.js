@@ -1,7 +1,7 @@
 const env = process.env.NODE_ENV || 'development';
 const serverIP = 'localhost';
-const serverPort = 3000;
-export default {
+const serverPort = 5000;
+const CONSTANTS = {
   CUSTOMER: 'customer',
   CREATOR: 'creator',
   CONTEST_STATUS_ACTIVE: 'active',
@@ -16,6 +16,7 @@ export default {
   STATIC_IMAGES_PATH: '/staticImages/',
   ANONYM_IMAGE_PATH: '/staticImages/anonym.png',
   BASE_URL: `http://${serverIP}:${serverPort}/`,
+  MOCK_HREF: 'http://www.google.com',
   ACCESS_TOKEN: 'accessToken',
   publicURL:
     env === 'production'
@@ -40,6 +41,57 @@ export default {
     'an App',
     'a Product',
     'a Startup',
+  ],
+  NAVIGATION_ITEMS: [
+    {
+      title: 'NAME IDEAS',
+      items: [
+        'BEAUTY',
+        'CONSULTING',
+        'E-COMMERCE',
+        'FASHION & CLOTHING',
+        'FINANCE',
+        'ESTATE',
+        'TECH',
+        'MORE CATEGORIES',
+      ],
+    },
+    {
+      title: 'CONSTESTS',
+      items: [
+        'HOW IT WORKS',
+        'PRICING',
+        'AGENCY SERVICE',
+        'ACTIVE CONTESTS',
+        'WINNERS',
+        'LEADERBOARD',
+        'BECOME A CREATIVE',
+      ],
+    },
+    {
+      title: 'OUR WORK',
+      items: ['NAMES', 'TAGLINES', 'LOGOS', 'TESTIMONIALS'],
+    },
+    {
+      title: 'NAMES FOR SALE',
+      items: [
+        'POPULAR NAMES',
+        'SHORT NAMES',
+        'INTRIGUING NAMES',
+        'NAMES BY CATEGORY',
+        'VISUAL NAME SEARCH',
+        'SELL YOUR DOMAINS',
+      ],
+    },
+    {
+      title: 'BLOG',
+      items: [
+        'ULTIMATE NAMING GUIDE',
+        'POETIC DEVICES IN BUISINESS NAMING',
+        'CROWDED BAR THEORY',
+        'ALL ARTICLES',
+      ],
+    },
   ],
   FooterItems: [
     {
@@ -78,3 +130,4 @@ export default {
     },
   ],
 };
+export default CONSTANTS;
