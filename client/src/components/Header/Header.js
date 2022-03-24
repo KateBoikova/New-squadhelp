@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { clearUserStore, headerRequest } from '../../actions/actionCreator';
+import Logo from '../Logo';
 
 class Header extends React.Component {
   componentDidMount () {
@@ -27,9 +28,9 @@ class Header extends React.Component {
       <span>{item.title}</span>
       <img src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`} alt='menu' />
       <ul>
-        {item.items.map(i => (
-          <li key={i}>
-            <a href={`${CONSTANTS.MOCK_HREF}`}>{i}</a>
+        {item.items.map(({ title, link }) => (
+          <li key={title}>
+            <Link to={link}>{title}</Link>
           </li>
         ))}
       </ul>
@@ -73,7 +74,7 @@ class Header extends React.Component {
               </li>
               <li>
                 <Link
-                  to='http:/www.google.com'
+                  to={CONSTANTS.MOCK_HREF}
                   style={{ textDecoration: 'none' }}
                 >
                   <span>Messages</span>
@@ -81,7 +82,7 @@ class Header extends React.Component {
               </li>
               <li>
                 <Link
-                  to='http:/www.google.com'
+                  to={CONSTANTS.MOCK_HREF}
                   style={{ textDecoration: 'none' }}
                 >
                   <span>Affiliate Dashboard</span>
@@ -127,19 +128,23 @@ class Header extends React.Component {
         </div>
         <div className={styles.loginSignnUpHeaders}>
           <div className={styles.numberContainer}>
-            <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt='phone' />
-            <span>(877)&nbsp;355-3585</span>
+            <a
+              href={`tel:${CONSTANTS.PHONE_NUMBER}`}
+              style={{ textDecoration: 'none' }}
+            >
+              <img
+                src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`}
+                alt='phone'
+              />
+              <span>{`${CONSTANTS.PHONE_NUMBER}`}</span>
+            </a>
           </div>
           <div className={styles.userButtonsContainer}>
             {this.renderLoginButtons()}
           </div>
         </div>
         <div className={styles.navContainer}>
-          <img
-            src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`}
-            className={styles.logo}
-            alt='blue_logo'
-          />
+          <Logo />
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>{this.navigationMenuRender()}</ul>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from 'formik';
+import CONSTANTS from '../../constants';
 
 const AgreeTermOfServiceInput = ({ id, type, classes, label, ...rest }) => (
   <Field {...rest}>
@@ -15,7 +16,7 @@ const AgreeTermOfServiceInput = ({ id, type, classes, label, ...rest }) => (
             <input {...field} placeholder={label} id={id} type={type} />
             <label htmlFor={id}>
               By clicking this checkbox, you agree to our{' '}
-              <a href='https://www.google.com' target='_blank' rel='noreferrer'>
+              <a href={CONSTANTS.MOCK_HREF} target='_blank' rel='noreferrer'>
                 Terms of Service.
               </a>
             </label>
