@@ -1,0 +1,32 @@
+@import ../../../common/styles/_templates
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+
+.contactsContainer
+  max-width: 1000px
+  width: 1000px
+  display: grid
+  grid-template-areas: 'a b' 'c b'
+
+.contactsA
+  grid-area: a
+.contactsB
+  grid-area: b
+.contactsC
+  grid-area: c
+
+.arrow
+  color: #377DFF
+  background-color: #EAF2FF
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  @extend %flex-center
+
+.contactsHeader
+  font-size: 20px
+
+.contactsHeader2
+  font-size: 24px
+
+.questionsHeader
+  font-size: 32px
