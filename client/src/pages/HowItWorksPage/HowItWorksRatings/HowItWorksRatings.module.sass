@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+@import ../../../common/styles/_templates
+  
+.ratingsContainer
+  display: flex
+  justify-content: center
+  font-family: Poppins, Arial, Helvetica, sans-serif
+  
+.ratingsItem
+  padding-right: 20px
+  margin: 40px auto
+  text-align: center
+  font-size: 16px
+  color: #778AA4
+  line-height: 1.5em
+  width: 30%
+  flex-grow: 1
+  
+
+.ratingsItem::after
+  // content: ''
+  // border-left: 1px solid #778AA4 
+  // transform: rotate(15deg)
+  // height: 200px
+  // position: absolute
+  // top: -50%
+  // left: 50%
+
+  position: absolute
+  right: -50%
+  top: 50%
+  height: 200px
+  border-left: 1px solid #778AA4 
+  content: ''
+  margin-top: 10px
+  transform: rotate(15deg)
+
+.img
+  width: 70px
+  margin: 15px
+  display: block
+  margin: auto
+
+.peopleAvatars
+  width: 85px
+
+.emphasis
+  font-weight: 700
+  color: black
+  display: inline
