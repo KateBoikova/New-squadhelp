@@ -1,0 +1,112 @@
+@import ../../../common/styles/_templates
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+
+  
+.headerSection
+  padding: 30px
+  display: flex
+  margin: 0 70px
+  
+.label 
+  height: 30px
+  width: 180px
+  border-radius: 20px
+  padding: 2px 10px
+  background-color: #eaf2ff
+  color: #538fff
+  font-size: 12px
+  font-family: Poppins, Arial, Helvetica, sans-serif
+  @extend %flex-center
+
+.textContainer
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  padding: 0 15px
+
+.header
+  font-size: 40px
+  font-weight: 500
+  margin: 10px 0
+
+.headerText
+  color: #77838F
+  font-size: 16px
+  line-height: 1.7em
+  font-weight: 400
+
+
+.playBtn 
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  width: 150px
+  height: 50px
+  background-color: #377DFF
+  color: #FFFFFF
+  border-radius: 25px
+  text-decoration: none
+  transition: all ease-in-out 0.25s 
+  
+.playBtn:hover
+  @extend %btnHoverAnimation
+
+.usage
+  @extend %flex-center
+  flex-direction: column
+
+.subHeader
+  font-size: 32px
+  padding-bottom: 10px
+  margin: 20px
+
+.usageText
+  color: #7B8692
+
+
+.phoneImageContainer
+  min-width: 377px
+  flex-wrap: nowrap
+  padding: 0 15px
+
+.cardsContainer 
+  @extend %flex-center
+  align-items: stretch
+  line-height: 1.7em
+
+
+.cardHeader 
+  font-size: 24px
+
+.card
+  @extend %flex-center
+  flex-direction: column
+  width: 350px
+  margin: 40px 10px
+  padding: 60px 20px
+  border: 1px solid #e7eaf3
+  border-radius: 5px
+  text-align: center
+  
+.cardIcon
+  width: 75px
+
+.cardText 
+  color: #7B8692
+  margin: 10px 0
+  
+
+.cardBtn
+  height: 50px
+  background-color: #377DFF
+  color: #FFFFFF
+  padding: 15px
+  margin: 10px 0
+  border-radius: 5px
+  text-decoration: none
+  transition: all ease-in-out 0.25s 
+  display: flex
+  align-items: center
+
+.cardBtn:hover
+  @extend %btnHoverAnimation
