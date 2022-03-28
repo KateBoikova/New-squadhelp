@@ -1,0 +1,47 @@
+@import ../../../common/styles/_templates
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap')
+
+.startContainer
+  display: flex
+  justify-content: space-between
+  height: 220px
+  background: #2B208C
+  background: linear-gradient(150deg, #2B208C 0%, #199DFD 100%)
+  font-family: Poppins, Arial, Helvetica, sans-serif
+
+.startBanner
+  @extend %flex-center
+  flex-direction: column
+  justify-content: space-around
+  padding: 20px
+
+.img1
+  width: 250px
+  margin-bottom: auto
+
+.img2
+  width: 200px
+  margin-top: auto
+
+.startBannerHeader
+  font-size: 32px
+  color: #00DFFC
+  font-weight: 500
+
+.startBannerText
+  color: #FFFFFF
+  font-size: 20px
+
+.startBannerBtn
+  height: 50px
+  max-width: 155px
+  width: 150px
+  border: none
+  border-radius: 7px
+  transition: all ease-in-out 0.25s
+  a
+    text-decoration: none
+    color: #1e2022
+
+.startBannerBtn:hover
+  @extend %btnHoverAnimation
